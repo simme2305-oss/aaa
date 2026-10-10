@@ -177,7 +177,7 @@ export async function calendarView(el, ctx) {
         </div>
         <label class="field">
           <span>Ort</span>
-          <input name="location" maxlength="100" placeholder="z. B. Ebenweiler Hütte" value="${ev?.location ?? ''}" />
+          <input name="location" maxlength="100" placeholder="z. B. Bude Ebenweiler" value="${ev?.location ?? ''}" />
         </label>
         <label class="field">
           <span>Beschreibung</span>
