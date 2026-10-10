@@ -1,0 +1,1712 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0e1411" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Bude Ebenweiler</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxZDNhMmQiLz4KICA8cGF0aCBkPSJNMTQgMzIgMzIgMTZsMTggMTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQ1ZDg5YyIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNMjAgMjl2MTdoMjRWMjkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQ1ZDg5YyIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPHBhdGggZD0iTTI4IDQ2di05aDh2OSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDVkODljIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <style>:root {
+  --bg: #0e1411;
+  --bg-glow: #17231d;
+  --bar: rgba(16, 23, 19, 0.94);
+  --card: #172019;
+  --card-2: #1e2922;
+  --inset: #111915;
+  --border: #243029;
+  --border-strong: #314038;
+  --text: #f2ede3;
+  --text-2: #d9ded9;
+  --muted: #8e9a93;
+  --faint: #56625c;
+  --primary: #45d89c;
+  --primary-hover: #62e3ad;
+  --primary-ink: #0a1a12;
+  --primary-soft: #1d3a2d;
+  --danger: #f0786d;
+  --danger-soft: rgba(240, 120, 109, 0.12);
+  --maxw: 760px;
+  --heading: 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text-2);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--heading);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--primary);
+}
+
+button {
+  font: inherit;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+/* ---------- Grundlayout ---------- */
+
+.app {
+  min-height: 100dvh;
+  background:
+    radial-gradient(110% 420px at 0% 0%, var(--bg-glow) 0%, transparent 70%) no-repeat,
+    var(--bg);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bar);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.topbar-inner {
+  max-width: var(--maxw);
+  height: 68px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand {
+  color: var(--text);
+  font-family: var(--heading);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topnav {
+  display: none;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.topnav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  color: var(--text);
+  background: var(--card-2);
+}
+
+.topnav a.active {
+  color: var(--primary);
+}
+
+.topnav .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 16px calc(104px + env(safe-area-inset-bottom));
+}
+
+.tabbar {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 20;
+  background: var(--bar);
+  border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.tabbar-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0 12px;
+  color: var(--muted);
+  font-size: 12.5px;
+  text-decoration: none;
+}
+
+.tab .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.tab.active {
+  color: var(--primary);
+}
+
+@media (min-width: 860px) {
+  .tabbar {
+    display: none;
+  }
+  .topnav {
+    display: flex;
+  }
+  .topnav + .menu-wrap {
+    margin-left: 8px;
+  }
+  .main {
+    padding-bottom: 64px;
+  }
+}
+
+/* ---------- Avatar & Menü ---------- */
+
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.avatar-lg {
+  width: 64px;
+  height: 64px;
+  font-size: 22px;
+}
+
+.menu-wrap {
+  position: relative;
+  margin-left: auto;
+}
+
+.avatar-btn {
+  border: 0;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.avatar-btn:hover,
+.avatar-btn[aria-expanded='true'] {
+  box-shadow: 0 0 0 3px rgba(69, 216, 156, 0.25);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 30;
+  min-width: 240px;
+  padding: 6px;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.5);
+}
+
+.menu-head {
+  padding: 10px 12px 12px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu-head strong {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.menu-head span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.menu a,
+.menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: var(--text-2);
+  font-size: 15px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu a:hover,
+.menu button:hover {
+  background: var(--card-2);
+  color: var(--text);
+}
+
+.menu .icon {
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+}
+
+.menu .danger,
+.menu .danger .icon {
+  color: var(--danger);
+}
+
+/* ---------- Seitenkopf ---------- */
+
+.hero {
+  padding: 32px 0 28px;
+}
+
+.hero-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 8vw, 38px);
+  font-weight: 800;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 16.5px;
+}
+
+.hero > .btn {
+  margin-top: 22px;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 15.5px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-ink);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text-2);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: var(--card-2);
+}
+
+.btn-soft {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.btn-soft:hover:not(:disabled) {
+  background: #22442f;
+}
+
+.btn-danger {
+  background: transparent;
+  border-color: rgba(240, 120, 109, 0.4);
+  color: var(--danger);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--danger-soft);
+}
+
+.btn-danger-solid {
+  background: var(--danger);
+  color: #1b0907;
+}
+
+.btn-sm {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  gap: 8px;
+}
+
+.btn-sm .icon {
+  width: 17px;
+  height: 17px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background: var(--card-2);
+  color: var(--text);
+}
+
+.icon-btn.danger:hover {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.icon-btn .icon {
+  width: 19px;
+  height: 19px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ---------- Karten ---------- */
+
+.stack {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 22px 20px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 16.5px;
+}
+
+.card-label .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.card-link {
+  color: var(--muted);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: var(--primary);
+}
+
+.card-text {
+  color: var(--text-2);
+  font-size: 16.5px;
+}
+
+.card-title {
+  margin-bottom: 14px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.big-number {
+  color: var(--text);
+  font-family: var(--heading);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.big-number.accent {
+  color: var(--primary);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Übersicht: nächste Termine */
+.mini-list {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mini-list a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 -10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  color: var(--text-2);
+  text-decoration: none;
+}
+
+.mini-list a:hover {
+  background: var(--card-2);
+}
+
+.mini-date {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  flex: none;
+  padding: 6px 0;
+  border-radius: 12px;
+  background: var(--primary-soft);
+  line-height: 1.1;
+}
+
+.mini-date small {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.mini-date b {
+  color: var(--text);
+  font-family: var(--heading);
+  font-size: 18px;
+}
+
+.mini-title {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.mini-meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.avatar-stack {
+  display: flex;
+  margin-top: 14px;
+}
+
+.avatar-stack .avatar {
+  width: 36px;
+  height: 36px;
+  margin-right: -8px;
+  border: 2px solid var(--card);
+  font-size: 12px;
+}
+
+.avatar-stack .more {
+  background: var(--card-2);
+  color: var(--muted);
+}
+
+/* ---------- Kalender ---------- */
+
+.cal-card {
+  padding: 16px;
+}
+
+.cal {
+  padding: 10px 10px 12px;
+  border-radius: 14px;
+  background: var(--inset);
+}
+
+.cal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 0 10px;
+}
+
+.cal-title {
+  color: var(--text);
+  font-size: 16.5px;
+  font-weight: 500;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px 2px;
+}
+
+.cal-wd {
+  padding: 6px 0;
+  color: var(--muted);
+  font-size: 14.5px;
+  text-align: center;
+}
+
+.day {
+  position: relative;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text-2);
+  font-size: 15.5px;
+  cursor: pointer;
+}
+
+.day:hover {
+  background: var(--card-2);
+}
+
+.day.outside {
+  color: var(--faint);
+}
+
+.day.today {
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.day.selected {
+  background: var(--primary);
+  color: var(--primary-ink);
+  font-weight: 600;
+}
+
+.day.has::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary);
+  transform: translateX(-50%);
+}
+
+.day.selected.has::after {
+  background: var(--primary-ink);
+}
+
+.cal-today {
+  color: var(--muted);
+}
+
+/* ---------- Abschnitte & Events ---------- */
+
+.section {
+  margin-top: 36px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.section h2 {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.section-head h2 {
+  margin: 0;
+}
+
+.section > h2 {
+  margin-bottom: 16px;
+}
+
+.section h2.small {
+  font-size: 21px;
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 16.5px;
+}
+
+.event {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.date-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 58px;
+  min-height: 84px;
+  flex: none;
+  padding: 14px 0;
+  border-radius: 18px;
+  background: var(--primary-soft);
+}
+
+.date-badge small {
+  color: var(--primary);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.date-badge b {
+  color: var(--text);
+  font-family: var(--heading);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.date-badge .year {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.event-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.event-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.event h3 {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+  font-size: 21px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.event-actions {
+  display: flex;
+  margin: -6px -8px 0 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 15.5px;
+  overflow-wrap: anywhere;
+}
+
+.meta .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.desc {
+  margin-top: 12px;
+  color: var(--text-2);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.by {
+  margin-top: 12px;
+  color: var(--faint);
+  font-size: 13px;
+}
+
+/* ---------- Mitglieder ---------- */
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.member:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.member:last-child {
+  padding-bottom: 0;
+}
+
+.member-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.member-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.member-name span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member-sub {
+  color: var(--muted);
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 24px;
+  flex: none;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge .icon {
+  width: 13px;
+  height: 13px;
+}
+
+.badge-muted {
+  background: var(--card-2);
+  color: var(--muted);
+}
+
+.hint {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 16px;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+.hint .icon {
+  margin-top: 1px;
+  color: var(--primary);
+}
+
+/* ---------- Profil ---------- */
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-head h2 {
+  font-size: 22px;
+}
+
+/* ---------- Formulare ---------- */
+
+.field {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.field > span,
+.field-label {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.field small {
+  color: var(--faint);
+  font-size: 13px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  background: var(--inset);
+  color: var(--text);
+  font: 400 16px/1.4 var(--body);
+  outline: none;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type='date'],
+input[type='time'] {
+  min-width: 0;
+}
+
+textarea {
+  height: auto;
+  min-height: 100px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+select {
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238e9a93' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(69, 216, 156, 0.18);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--faint);
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap input {
+  padding-right: 48px;
+}
+
+.input-wrap .icon-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.input-row > :first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.mono {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  letter-spacing: 0.02em;
+}
+
+.form-error {
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 14.5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ---------- Login ---------- */
+
+.auth {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  background:
+    radial-gradient(90% 60% at 0% 0%, var(--bg-glow) 0%, transparent 70%) no-repeat,
+    var(--bg);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 22px;
+  border-radius: 18px;
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.auth-icon .icon {
+  width: 28px;
+  height: 28px;
+}
+
+.auth h1 {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.auth .subtitle {
+  margin-bottom: 28px;
+}
+
+.auth .card {
+  padding: 24px 20px;
+}
+
+.auth .btn-block {
+  margin-top: 6px;
+}
+
+.auth-foot {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 14.5px;
+  text-align: center;
+}
+
+/* ---------- Dialoge ---------- */
+
+dialog.modal {
+  overflow: hidden;
+  width: min(520px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 22px;
+  background: var(--card);
+  color: var(--text-2);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
+dialog.modal::backdrop {
+  background: rgba(3, 7, 5, 0.72);
+}
+
+dialog.modal[open] {
+  animation: pop 0.18s ease-out;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100dvh - 34px);
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 16px 6px 22px;
+}
+
+.modal-head h2 {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.modal-body {
+  padding: 12px 22px 4px;
+  overflow-y: auto;
+}
+
+.modal-body > p {
+  margin-bottom: 16px;
+}
+
+.modal-foot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px 22px;
+}
+
+.modal-foot .spacer {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  dialog.modal {
+    width: 100%;
+    max-width: 100%;
+    margin: auto 0 0;
+    border-bottom: 0;
+    border-radius: 24px 24px 0 0;
+  }
+  dialog.modal[open] {
+    animation: sheet 0.22s ease-out;
+  }
+  .modal-foot {
+    padding-bottom: calc(22px + env(safe-area-inset-bottom));
+  }
+  .modal-foot {
+    flex-wrap: wrap;
+  }
+  .modal-foot .btn {
+    flex: 1;
+    min-width: 0;
+  }
+  .modal-foot .btn-danger {
+    order: 1;
+    flex-basis: 100%;
+  }
+  .modal-foot .spacer {
+    display: none;
+  }
+}
+
+.credentials {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--inset);
+  border: 1px solid var(--border);
+}
+
+.credentials div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.credentials dt {
+  color: var(--muted);
+}
+
+.credentials dd {
+  margin: 0;
+  color: var(--text);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+/* ---------- Toasts, Laden ---------- */
+
+.toasts {
+  position: fixed;
+  left: 50%;
+  bottom: calc(88px + env(safe-area-inset-bottom));
+  z-index: 50;
+  display: grid;
+  gap: 8px;
+  width: min(420px, calc(100% - 32px));
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  background: #1f2a24;
+  color: var(--text);
+  font-size: 15px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+  animation: pop 0.18s ease-out;
+}
+
+.toast .icon {
+  color: var(--primary);
+}
+
+.toast.error {
+  border-color: rgba(240, 120, 109, 0.5);
+}
+
+.toast.error .icon {
+  color: var(--danger);
+}
+
+@media (min-width: 860px) {
+  .toasts {
+    bottom: 32px;
+  }
+}
+
+.boot,
+.loading {
+  display: grid;
+  place-items: center;
+  min-height: 50vh;
+}
+
+.boot {
+  min-height: 100dvh;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--border-strong);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.error-state {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.error-state p {
+  margin: 8px 0 20px;
+  color: var(--muted);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+}
+
+@keyframes sheet {
+  from {
+    transform: translateY(40px);
+    opacity: 0.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.card .empty + .btn {
+  margin-top: 14px;
+}
+
+.admin-text {
+  margin: 12px 0 16px;
+}
+</style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="boot"><div class="spinner"></div></div>
+    </div>
+    <script>(()=>{var q=class extends Error{constructor(t,a){super(t),this.status=a}},ae=()=>{};function ne(e){ae=e}async function h(e,{method:t="GET",body:a}={}){let n;try{n=await fetch(`/api${e}`,{method:t,headers:a?{"Content-Type":"application/json"}:{},body:a?JSON.stringify(a):void 0,credentials:"same-origin"})}catch{throw new q("Keine Verbindung zum Server.",0)}let i=await n.json().catch(()=>null);if(n.status===401&&e!=="/login")throw ae(),new q(i?.error||"Bitte melde dich an.",401);if(!n.ok)throw new q(i?.error||"Etwas ist schiefgelaufen.",n.status);return i}var B=class{constructor(t){this.value=t}toString(){return this.value}},x=e=>new B(e);function $e(e){return String(e??"").replace(/[&<>"']/g,t=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[t])}function se(e){return e instanceof B?e.value:Array.isArray(e)?e.map(se).join(""):e===!1||e==null?"":$e(e)}function s(e,...t){let a=e[0];return t.forEach((n,i)=>{a+=se(n)+e[i+1]}),new B(a)}var Me={home:'<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',calendar:'<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/>',calendarPlus:'<path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="M16 19h6"/><path d="M19 16v6"/>',users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',userPlus:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/>',user:'<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',clock:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',pin:'<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',chevronLeft:'<path d="m15 18-6-6 6-6"/>',chevronRight:'<path d="m9 18 6-6-6-6"/>',plus:'<path d="M5 12h14"/><path d="M12 5v14"/>',lock:'<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',logout:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/>',key:'<path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/>',pencil:'<path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/>',trash:'<path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><path d="M10 11v6"/><path d="M14 11v6"/>',shield:'<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',x:'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',eye:'<path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>',eyeOff:'<path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/>',copy:'<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',refresh:'<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>',check:'<path d="M20 6 9 17l-5-5"/>',alert:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>',info:'<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>'};function l(e){return x(`<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${Me[e]}</svg>`)}var te=e=>String(e).padStart(2,"0"),D=e=>new Intl.DateTimeFormat("de-DE",e),Se=D({weekday:"long"}),ke=D({month:"short"}),xe=D({month:"long",year:"numeric"}),Ee=D({weekday:"long",day:"numeric",month:"long"}),Pe=D({weekday:"long",day:"numeric",month:"long",year:"numeric"}),Le=D({month:"short",year:"numeric"}),I=e=>`${e.getFullYear()}-${te(e.getMonth()+1)}-${te(e.getDate())}`,P=()=>I(new Date);function k(e){let[t,a,n]=e.split("-").map(Number);return new Date(t,a-1,n)}var K=e=>Se.format(e),F=e=>ke.format(e).toUpperCase(),re=e=>xe.format(e),Y=e=>(e.getFullYear()===new Date().getFullYear()?Ee:Pe).format(e),O=e=>Le.format(new Date(e));function U(e){return e.time?`${e.time} Uhr`:"ganztägig"}function E(e){let t=String(e).trim().split(/\s+/).filter(Boolean);if(!t.length)return"?";let a=[...t[0]][0],n=t.length>1?[...t[t.length-1]][0]:"";return(a+n).toUpperCase()}var G="abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";function R(e=10){let t="",a=256-256%G.length;for(;t.length<e;)for(let n of crypto.getRandomValues(new Uint8Array(e*2)))n<a&&t.length<e&&(t+=G[n%G.length]);return t}async function ie(e){try{return await navigator.clipboard.writeText(e),!0}catch{let t=document.createElement("textarea");t.value=e,t.setAttribute("readonly",""),(document.querySelector("dialog[open]")??document.body).append(t),t.select();let a=document.execCommand("copy");return t.remove(),a}}function $(e,t="ok"){let a=document.querySelector(".toasts");a||(a=document.createElement("div"),a.className="toasts",a.setAttribute("role","status"),a.setAttribute("aria-live","polite"),document.body.append(a));let n=document.createElement("div");n.className=`toast ${t==="error"?"error":""}`,n.innerHTML=String(s`${l(t==="error"?"alert":"check")}<span>${e}</span>`),a.append(n),setTimeout(()=>n.remove(),3200)}function L({title:e,body:t,submitLabel:a="Speichern",cancelLabel:n="Abbrechen",submitClass:i="btn-primary",extraFooter:o="",onSubmit:d,onOpen:b,onClose:m}){let u=document.createElement("dialog");u.className="modal",u.innerHTML=String(s`
+    <form class="modal-form">
+      <div class="modal-head">
+        <h2>${e}</h2>
+        <button type="button" class="icon-btn" data-close aria-label="Schließen">${l("x")}</button>
+      </div>
+      <div class="modal-body">
+        ${t}
+        <div class="form-error" role="alert" hidden></div>
+      </div>
+      <div class="modal-foot">
+        ${o}
+        <span class="spacer"></span>
+        ${n?s`<button type="button" class="btn btn-ghost" data-close>${n}</button>`:""}
+        <button type="submit" class="btn ${i}">${a}</button>
+      </div>
+    </form>`);let c=u.querySelector("form"),g=u.querySelector(".form-error"),v=u.querySelector("[type=submit]");return u.showError=f=>{g.textContent=f,g.hidden=!1},u.addEventListener("click",f=>{(f.target===u||f.target.closest("[data-close]"))&&u.close()}),u.addEventListener("close",()=>{u.remove(),m?.()}),c.addEventListener("submit",async f=>{if(f.preventDefault(),!d)return u.close();g.hidden=!0,v.disabled=!0;try{await d(new FormData(c),u)!==!1&&u.close()}catch(r){u.showError(r.message)}finally{v.disabled=!1}}),document.body.append(u),u.showModal(),b?.(u),u}function Z({title:e,message:t,confirmLabel:a="Löschen",action:n}){return L({title:e,body:s`<p>${t}</p>`,submitLabel:a,submitClass:"btn-danger-solid",onSubmit:n})}document.addEventListener("click",e=>{let t=e.target.closest("[data-toggle-password]");if(!t)return;let a=t.parentElement.querySelector("input"),n=a.type==="password";a.type=n?"text":"password",t.innerHTML=String(l(n?"eyeOff":"eye")),t.setAttribute("aria-label",n?"Passwort verbergen":"Passwort anzeigen")});function A({name:e,autocomplete:t,required:a=!0,value:n="",minlength:i=0}){return s`
+    <div class="input-wrap">
+      <input
+        type="password"
+        name="${e}"
+        autocomplete="${t}"
+        value="${n}"
+        ${x(a?"required":"")}
+        ${x(i?`minlength="${i}"`:"")}
+      />
+      <button type="button" class="icon-btn" data-toggle-password aria-label="Passwort anzeigen">${l("eye")}</button>
+    </div>
+  `}var T=()=>s`<div class="loading"><div class="spinner"></div></div>`;var De=["Mo","Di","Mi","Do","Fr","Sa","So"];async function oe(e,t){let{user:a}=t.state,n=new URLSearchParams(location.search),i=/^\d{4}-\d{2}-\d{2}$/.test(n.get("datum")??"")?n.get("datum"):null,o=i,d=k(i??P());d.setDate(1);let b=[];if(e.innerHTML=String(T()),b=await h("/events"),!e.isConnected)return;let m=r=>a.role==="admin"||r.created_by===a.id;function u(r){let p=k(r.date),w=p.getFullYear()!==new Date().getFullYear();return s`
+      <article class="card event">
+        <div class="date-badge" aria-hidden="true">
+          <small>${F(p)}</small>
+          <b>${p.getDate()}</b>
+          ${w?s`<span class="year">${p.getFullYear()}</span>`:""}
+        </div>
+        <div class="event-body">
+          <div class="event-top">
+            <h3>${r.title}</h3>
+            ${m(r)?s`<div class="event-actions">
+                  <button class="icon-btn" data-edit="${r.id}" aria-label="Event bearbeiten">${l("pencil")}</button>
+                  <button class="icon-btn danger" data-delete="${r.id}" aria-label="Event löschen">${l("trash")}</button>
+                </div>`:""}
+          </div>
+          <p class="meta">${l("clock")}<span>${K(p)}, ${U(r)}</span></p>
+          ${r.location?s`<p class="meta">${l("pin")}<span>${r.location}</span></p>`:""}
+          ${r.description?s`<p class="desc">${r.description}</p>`:""}
+          ${r.created_by_name?s`<p class="by">Erstellt von ${r.created_by_name}</p>`:""}
+        </div>
+      </article>`}function c(r){let p=d.getFullYear(),w=d.getMonth(),y=(new Date(p,w,1).getDay()+6)%7,M=new Date(p,w+1,0).getDate(),H=Math.ceil((y+M)/7)*7,ve=P(),ee=[];for(let z=0;z<H;z++){let C=new Date(p,w,1-y+z),N=I(C),V=r.get(N)?.length??0,we=["day",C.getMonth()!==w&&"outside",N===ve&&"today",N===o&&"selected",V&&"has"].filter(Boolean),ye=`${Y(C)}${V?`, ${V} ${V===1?"Event":"Events"}`:""}`;ee.push(s`
+        <button type="button" class="${we.join(" ")}" data-day="${N}" aria-label="${ye}"
+          aria-pressed="${N===o}">${C.getDate()}</button>`)}return s`
+      <div class="card cal-card">
+        <div class="cal">
+          <div class="cal-head">
+            <button class="icon-btn" data-month="-1" aria-label="Vorheriger Monat">${l("chevronLeft")}</button>
+            <div class="cal-title" aria-live="polite">${re(d)}</div>
+            <button class="icon-btn" data-month="1" aria-label="Nächster Monat">${l("chevronRight")}</button>
+          </div>
+          <div class="cal-grid">
+            ${De.map(z=>s`<div class="cal-wd" aria-hidden="true">${z}</div>`)}
+            ${ee}
+          </div>
+        </div>
+      </div>`}function g(){let r=new Map;for(let M of b)r.has(M.date)||r.set(M.date,[]),r.get(M.date).push(M);let p=P(),w=b.filter(M=>M.date>=p),y=o?r.get(o)??[]:[];e.innerHTML=String(s`
+      <section class="hero">
+        <h1>Kalender & Events</h1>
+        <p class="subtitle">Plane gemeinsame Termine</p>
+        <button class="btn btn-primary" data-new>${l("calendarPlus")} Neues Event</button>
+      </section>
+
+      ${c(r)}
+
+      ${o?s`
+          <section class="section">
+            <div class="section-head">
+              <h2 class="small">${Y(k(o))}</h2>
+              <button class="icon-btn" data-clear aria-label="Auswahl aufheben">${l("x")}</button>
+            </div>
+            ${y.length?s`<div class="stack">${y.map(u)}</div>`:s`
+                <div class="card">
+                  <p class="empty">Nichts geplant an diesem Tag.</p>
+                  <button class="btn btn-soft btn-sm" data-new data-date="${o}">
+                    ${l("plus")} Event an diesem Tag
+                  </button>
+                </div>`}
+          </section>`:""}
+
+      <section class="section">
+        <h2>Kommende Events</h2>
+        ${w.length?s`<div class="stack">${w.map(u)}</div>`:s`<p class="empty">Keine kommenden Events. Leg los mit „Neues Event“!</p>`}
+      </section>`)}async function v(){b=await h("/events"),e.isConnected&&g()}function f(r=null,p=null){let w=r?.date??p??o??P();L({title:r?"Event bearbeiten":"Neues Event",submitLabel:r?"Speichern":"Event erstellen",body:s`
+        <label class="field">
+          <span>Titel</span>
+          <input name="title" maxlength="100" required placeholder="z. B. Hüttenabend" value="${r?.title??""}" />
+        </label>
+        <div class="row">
+          <label class="field">
+            <span>Datum</span>
+            <input type="date" name="date" required value="${w}" />
+          </label>
+          <label class="field">
+            <span>Uhrzeit</span>
+            <input type="time" name="time" value="${r?.time??""}" />
+          </label>
+        </div>
+        <label class="field">
+          <span>Ort</span>
+          <input name="location" maxlength="100" placeholder="z. B. Bude Ebenweiler" value="${r?.location??""}" />
+        </label>
+        <label class="field">
+          <span>Beschreibung</span>
+          <textarea name="description" maxlength="1000" placeholder="Was ist geplant?">${r?.description??""}</textarea>
+        </label>`,onOpen:y=>{r||y.querySelector("[name=title]").focus()},onSubmit:async y=>{let M=Object.fromEntries(y),H=r?await h(`/events/${r.id}`,{method:"PUT",body:M}):await h("/events",{method:"POST",body:M});$(r?"Event gespeichert":"Event erstellt"),o&&(o=H.date),d=k(H.date),d.setDate(1),await v()}})}e.addEventListener("click",r=>{let p=r.target.closest("button");if(p){if(p.dataset.month)d=new Date(d.getFullYear(),d.getMonth()+Number(p.dataset.month),1),g();else if(p.dataset.day){let w=p.dataset.day;o=o===w?null:w;let y=k(w);y.getMonth()!==d.getMonth()&&(d=new Date(y.getFullYear(),y.getMonth(),1)),g()}else if(p.hasAttribute("data-clear"))o=null,g();else if(p.hasAttribute("data-new"))f(null,p.dataset.date);else if(p.dataset.edit)f(b.find(w=>w.id===Number(p.dataset.edit)));else if(p.dataset.delete){let w=b.find(y=>y.id===Number(p.dataset.delete));Z({title:"Event löschen?",message:`„${w.title}“ am ${Y(k(w.date))} wird für alle gelöscht.`,action:async()=>{await h(`/events/${w.id}`,{method:"DELETE"}),$("Event gelöscht"),await v()}})}}}),g()}async function le(e,t){let{user:a}=t.state;e.innerHTML=String(T());let[n,i]=await Promise.all([h("/events"),h("/members")]);if(!e.isConnected)return;let o=P(),d=n.filter(m=>m.date>=o).slice(0,3),b=i.slice(0,6);e.innerHTML=String(s`
+    <section class="hero">
+      <h1>Hallo ${a.name}</h1>
+      <p class="subtitle">Was gerade in der Gruppe los ist.</p>
+    </section>
+
+    <div class="stack">
+      <div class="card">
+        <div class="card-head">
+          <div class="card-label">${l("calendar")} Nächste Termine</div>
+          <a class="card-link" href="/kalender" data-link>Alle ansehen</a>
+        </div>
+        ${d.length?s`<ul class="mini-list">
+              ${d.map(m=>{let u=k(m.date);return s`<li>
+                  <a href="/kalender?datum=${m.date}" data-link>
+                    <span class="mini-date"><small>${F(u)}</small><b>${u.getDate()}</b></span>
+                    <span>
+                      <span class="mini-title">${m.title}</span>
+                      <span class="mini-meta">${K(u)}, ${U(m)}${m.location?` · ${m.location}`:""}</span>
+                    </span>
+                  </a>
+                </li>`})}
+            </ul>`:s`<p class="card-text">Keine Termine geplant.</p>`}
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-label">${l("users")} Mitglieder</div>
+          <a class="card-link" href="/mitglieder" data-link>Alle ansehen</a>
+        </div>
+        <div class="big-number accent">${i.length}</div>
+        <p class="muted">${i.length===1?"Person":"Personen"} in der Gruppe</p>
+        <div class="avatar-stack" aria-hidden="true">
+          ${b.map(m=>s`<span class="avatar" title="${m.name}">${E(m.name)}</span>`)}
+          ${i.length>b.length?s`<span class="avatar more">+${i.length-b.length}</span>`:""}
+        </div>
+      </div>
+
+      ${a.role==="admin"?s`<div class="card">
+            <div class="card-label">${l("shield")} Admin-Bereich</div>
+            <p class="card-text admin-text">Füge neue Leute hinzu und verwalte die Zugänge deiner Gruppe.</p>
+            <a class="btn btn-soft btn-sm" href="/mitglieder?neu=1" data-link>${l("userPlus")} Person hinzufügen</a>
+          </div>`:""}
+    </div>`)}function de(e,t){e.innerHTML=String(s`
+    <div class="auth">
+      <div class="auth-card">
+        <div class="auth-icon">${l("lock")}</div>
+        <h1>${t.state.appName}</h1>
+        <p class="subtitle">Dieser Bereich ist passwortgeschützt. Melde dich mit deinen Zugangsdaten an.</p>
+        <form class="card" novalidate>
+          <label class="field">
+            <span>Benutzername</span>
+            <input name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required />
+          </label>
+          <label class="field">
+            <span>Passwort</span>
+            ${A({name:"password",autocomplete:"current-password"})}
+          </label>
+          <div class="form-error" role="alert" hidden></div>
+          <button class="btn btn-primary btn-block" type="submit">Anmelden</button>
+        </form>
+        <p class="auth-foot">Noch keinen Zugang? Frag den Admin deiner Gruppe.</p>
+      </div>
+    </div>`);let a=e.querySelector("form"),n=e.querySelector(".form-error"),i=a.querySelector("[type=submit]");a.username.focus(),a.addEventListener("submit",async o=>{o.preventDefault(),n.hidden=!0;let d=a.username.value.trim(),b=a.password.value;if(!d||!b){n.textContent="Bitte Benutzername und Passwort eingeben.",n.hidden=!1;return}i.disabled=!0,i.textContent="Anmelden …";try{let{user:m}=await h("/login",{method:"POST",body:{username:d,password:b}});t.state.user=m,t.navigate(location.pathname+location.search,{replace:!0})}catch(m){n.textContent=m.message,n.hidden=!1,a.password.select(),i.disabled=!1,i.textContent="Anmelden"}})}function Ae(e,t){let a=d=>d.toLowerCase().replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9._-]/g,""),n=e.trim().split(/\s+/).map(a).filter(Boolean);if(!n.length)return"";let i=n[0].padEnd(3,"1").slice(0,32),o=[i];n.length>1&&o.push(`${n[0]}.${n[n.length-1]}`.slice(0,32));for(let d=2;d<100;d++)o.push(`${i.slice(0,30)}${d}`);return o.find(d=>!t.has(d))??i}function Te(e,t,a){return[`Dein Zugang für ${e}:`,`Link: ${location.origin}/`,`Benutzername: ${t}`,`Passwort: ${a}`,"","Du kannst das Passwort nach dem Login unter „Profil & Passwort“ ändern."].join(`
+`)}function ce({title:e,intro:t,appName:a,member:n,password:i}){let o=Te(a,n.username,i);L({title:e,body:s`
+      <p>${t}</p>
+      <dl class="credentials">
+        <div><dt>Benutzername</dt><dd class="mono">${n.username}</dd></div>
+        <div><dt>Passwort</dt><dd class="mono">${i}</dd></div>
+      </dl>
+      <p class="muted">Das Passwort wird nur jetzt angezeigt. Schick die Daten am besten direkt weiter.</p>`,cancelLabel:"Fertig",submitLabel:x(`${l("copy")} Zugangsdaten kopieren`),onSubmit:async()=>(await ie(o)?$("Zugangsdaten kopiert"):$("Kopieren hat nicht geklappt","error"),!1)})}function ue({label:e,hint:t,value:a="",required:n=!0}){return s`
+    <label class="field">
+      <span>${e}</span>
+      <div class="input-row">
+        <input name="password" class="mono" autocomplete="new-password" spellcheck="false" autocapitalize="none"
+          value="${a}" ${x(n?'required minlength="6"':'minlength="6"')} />
+        <button type="button" class="btn btn-ghost" data-generate aria-label="Neues Passwort erzeugen">
+          ${l("refresh")}
+        </button>
+      </div>
+      ${t?s`<small>${t}</small>`:""}
+    </label>`}function pe(e){e.querySelector("[data-generate]").addEventListener("click",()=>{let t=e.querySelector("[name=password]");t.value=R(),t.focus()})}async function me(e,t){let{user:a,appName:n}=t.state,i=a.role==="admin";e.innerHTML=String(T());let o=await h("/members");if(!e.isConnected)return;function d(){e.innerHTML=String(s`
+      <section class="hero">
+        <h1>Mitglieder</h1>
+        <p class="subtitle">${o.length} ${o.length===1?"Person":"Personen"} in der Gruppe</p>
+        ${i?s`<button class="btn btn-primary" data-add>${l("userPlus")} Person hinzufügen</button>`:""}
+      </section>
+
+      <div class="card">
+        <ul class="list">
+          ${o.map(c=>s`
+              <li class="member">
+                <span class="avatar" aria-hidden="true">${E(c.name)}</span>
+                <div class="member-main">
+                  <div class="member-name">
+                    <span>${c.name}</span>
+                    ${c.role==="admin"?s`<span class="badge">${l("shield")} Admin</span>`:""}
+                    ${c.id===a.id?s`<span class="badge badge-muted">Du</span>`:""}
+                  </div>
+                  <div class="member-sub">@${c.username} · dabei seit ${O(c.created_at)}</div>
+                </div>
+                ${i?s`<button class="icon-btn" data-edit="${c.id}" aria-label="${c.name} verwalten">
+                      ${l("pencil")}
+                    </button>`:""}
+              </li>`)}
+        </ul>
+      </div>
+
+      ${i?s`<p class="hint">${l("info")}<span>Nur eingeloggte Mitglieder sehen die Seite. Neue Leute bekommen
+            ihren Zugang von dir – es gibt keine öffentliche Registrierung.</span></p>`:s`<p class="hint">${l("info")}<span>Neue Leute kann nur ein Admin hinzufügen.</span></p>`}`)}async function b(){o=await h("/members"),e.isConnected&&d()}function m(){let c=new Set(o.map(v=>v.username)),g=!1;L({title:"Person hinzufügen",submitLabel:"Hinzufügen",body:s`
+        <label class="field">
+          <span>Name</span>
+          <input name="name" maxlength="60" required placeholder="z. B. Simon Boos" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span>Benutzername</span>
+          <input name="username" required minlength="3" maxlength="32" pattern="[a-z0-9._\\-]+"
+            autocapitalize="none" spellcheck="false" autocomplete="off" placeholder="z. B. simon" />
+          <small>Damit meldet sich die Person an. Nur Kleinbuchstaben, Zahlen, Punkt, Minus.</small>
+        </label>
+        ${ue({label:"Passwort",value:R(),hint:"Vorschlag – du kannst es auch selbst festlegen."})}
+        <label class="field">
+          <span>Rolle</span>
+          <select name="role">
+            <option value="member">Mitglied</option>
+            <option value="admin">Admin – darf Leute hinzufügen und verwalten</option>
+          </select>
+        </label>`,onOpen:v=>{let f=v.querySelector("[name=name]"),r=v.querySelector("[name=username]");f.focus(),f.addEventListener("input",()=>{g||(r.value=Ae(f.value,c))}),r.addEventListener("input",()=>{g=!0,r.value=r.value.toLowerCase()}),pe(v)},onSubmit:async v=>{let f=Object.fromEntries(v),r=await h("/members",{method:"POST",body:f});await b(),setTimeout(()=>ce({title:"Zugang erstellt",intro:`${r.name} kann sich jetzt mit diesen Daten anmelden:`,appName:n,member:r,password:f.password}))}})}function u(c){let g=c.id===a.id;L({title:`${c.name} verwalten`,body:s`
+        <label class="field">
+          <span>Name</span>
+          <input name="name" maxlength="60" required value="${c.name}" />
+        </label>
+        <label class="field">
+          <span>Benutzername</span>
+          <input name="username" required minlength="3" maxlength="32" pattern="[a-z0-9._\\-]+"
+            autocapitalize="none" spellcheck="false" value="${c.username}" />
+        </label>
+        <label class="field">
+          <span>Rolle</span>
+          <select name="role">
+            <option value="member" ${x(c.role==="member"?"selected":"")}>Mitglied</option>
+            <option value="admin" ${x(c.role==="admin"?"selected":"")}>Admin</option>
+          </select>
+        </label>
+        ${ue({label:"Neues Passwort (optional)",required:!1,hint:"Leer lassen, um das Passwort nicht zu ändern. Die Person wird dann abgemeldet."})}`,extraFooter:g?"":s`<button type="button" class="btn btn-danger" data-remove>${l("trash")} Entfernen</button>`,onOpen:v=>{pe(v),v.querySelector("[data-remove]")?.addEventListener("click",()=>{v.close(),Z({title:"Person entfernen?",message:`${c.name} (@${c.username}) verliert sofort den Zugang zur Seite. Von ${c.name} erstellte Events bleiben erhalten.`,confirmLabel:"Entfernen",action:async()=>{await h(`/members/${c.id}`,{method:"DELETE"}),$(`${c.name} wurde entfernt`),await b()}})})},onSubmit:async v=>{let f=Object.fromEntries(v);f.password||delete f.password;let r=await h(`/members/${c.id}`,{method:"PATCH",body:f});g&&t.setUser({...a,...r}),await b(),g&&r.role!=="admin"&&t.navigate("/mitglieder",{replace:!0}),f.password?setTimeout(()=>ce({title:"Passwort geändert",intro:`Neue Zugangsdaten für ${r.name}:`,appName:n,member:r,password:f.password})):$("Gespeichert")}})}e.addEventListener("click",c=>{let g=c.target.closest("button");g&&(g.hasAttribute("data-add")?m():g.dataset.edit&&u(o.find(v=>v.id===Number(g.dataset.edit))))}),d(),i&&new URLSearchParams(location.search).has("neu")&&(history.replaceState(null,"","/mitglieder"),m())}function W(e,t){let{user:a}=t.state;e.innerHTML=String(s`
+    <section class="hero">
+      <h1>Profil</h1>
+      <p class="subtitle">Dein Zugang zur Gruppe</p>
+    </section>
+
+    <div class="stack">
+      <div class="card profile-head">
+        <span class="avatar avatar-lg" aria-hidden="true">${E(a.name)}</span>
+        <div>
+          <h2>${a.name}</h2>
+          <p class="muted">@${a.username} · ${a.role==="admin"?"Admin":"Mitglied"} · dabei seit ${O(a.created_at)}</p>
+        </div>
+      </div>
+
+      <form class="card" data-form="name">
+        <h2 class="card-title">Name</h2>
+        <label class="field">
+          <span>So sehen dich die anderen</span>
+          <input name="name" maxlength="60" required value="${a.name}" autocomplete="name" />
+        </label>
+        <div class="form-error" role="alert" hidden></div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Speichern</button></div>
+      </form>
+
+      <form class="card" data-form="password">
+        <h2 class="card-title">Passwort ändern</h2>
+        <label class="field">
+          <span>Aktuelles Passwort</span>
+          ${A({name:"currentPassword",autocomplete:"current-password"})}
+        </label>
+        <label class="field">
+          <span>Neues Passwort</span>
+          ${A({name:"newPassword",autocomplete:"new-password",minlength:6})}
+          <small>Mindestens 6 Zeichen.</small>
+        </label>
+        <label class="field">
+          <span>Neues Passwort wiederholen</span>
+          ${A({name:"repeatPassword",autocomplete:"new-password",minlength:6})}
+        </label>
+        <div class="form-error" role="alert" hidden></div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Passwort ändern</button></div>
+      </form>
+
+      <button class="btn btn-danger btn-block" data-logout>${l("logout")} Abmelden</button>
+    </div>`);async function n(i,o){let d=i.querySelector(".form-error"),b=i.querySelector("[type=submit]");d.hidden=!0,b.disabled=!0;try{await o()}catch(m){d.textContent=m.message,d.hidden=!1}finally{b.disabled=!1}}e.querySelector("[data-form=name]").addEventListener("submit",i=>{i.preventDefault();let o=i.currentTarget;n(o,async()=>{let{user:d}=await h("/me",{method:"PATCH",body:{name:o.querySelector("[name=name]").value}});t.setUser(d),$("Name gespeichert"),W(e,t)})}),e.querySelector("[data-form=password]").addEventListener("submit",i=>{i.preventDefault();let o=i.currentTarget;n(o,async()=>{if(o.newPassword.value!==o.repeatPassword.value)throw new Error("Die neuen Passwörter stimmen nicht überein.");await h("/me/password",{method:"POST",body:{currentPassword:o.currentPassword.value,newPassword:o.newPassword.value}}),o.reset(),$("Passwort geändert")})})}var S={user:null,appName:"Bude Ebenweiler"},J=[{path:"/",label:"Übersicht",icon:"home",view:le},{path:"/kalender",label:"Kalender",icon:"calendar",view:oe},{path:"/mitglieder",label:"Mitglieder",icon:"users",view:me},{path:"/profil",view:W}],he=J.filter(e=>e.label),Q={state:S,navigate:be,setUser(e){S.user=e,fe()},async logout(){await h("/logout",{method:"POST"}).catch(()=>{}),S.user=null,history.replaceState(null,"","/"),j()}};function be(e,{replace:t=!1}={}){e!==location.pathname+location.search&&history[t?"replaceState":"pushState"](null,"",e),_()}function j(){let e=document.getElementById("app");if(!S.user){de(e,Q);return}e.innerHTML=String(s`
+    <div class="app">
+      <header class="topbar"><div class="topbar-inner" id="topbar"></div></header>
+      <main class="main" id="view"></main>
+      <nav class="tabbar" aria-label="Navigation">
+        <div class="tabbar-inner">
+          ${he.map(t=>s`<a class="tab" href="${t.path}" data-link>${l(t.icon)}<span>${t.label}</span></a>`)}
+        </div>
+      </nav>
+    </div>`),fe(),_()}function fe(){let e=document.getElementById("topbar");if(!e)return;let{user:t}=S;e.innerHTML=String(s`
+    <a class="brand" href="/" data-link>${S.appName}</a>
+    <nav class="topnav" aria-label="Navigation">
+      ${he.map(a=>s`<a href="${a.path}" data-link>${l(a.icon)}${a.label}</a>`)}
+    </nav>
+    <div class="menu-wrap">
+      <button class="avatar avatar-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Konto-Menü">
+        ${E(t.name)}
+      </button>
+      <div class="menu" role="menu" hidden>
+        <div class="menu-head">
+          <strong>${t.name}</strong>
+          <span>@${t.username} · ${t.role==="admin"?"Admin":"Mitglied"}</span>
+        </div>
+        <a href="/profil" data-link role="menuitem">${l("user")} Profil & Passwort</a>
+        <a href="/mitglieder" data-link role="menuitem">${l("users")} Mitglieder</a>
+        <button type="button" class="danger" data-logout role="menuitem">${l("logout")} Abmelden</button>
+      </div>
+    </div>`),ge()}function ge(){for(let e of document.querySelectorAll(".tab, .topnav a"))e.classList.toggle("active",e.getAttribute("href")===location.pathname)}function _(){let e=document.getElementById("view");if(!e)return j();X();let t=J.find(n=>n.path===location.pathname);t||(history.replaceState(null,"","/"),t=J[0]),ge();let a=document.createElement("div");e.replaceChildren(a),window.scrollTo(0,0),Promise.resolve(t.view(a,Q)).catch(n=>{!a.isConnected||n.status===401||(a.innerHTML=String(s`
+      <div class="error-state">
+        <h2>Das hat nicht geklappt</h2>
+        <p>${n.message}</p>
+        <button class="btn btn-ghost" data-retry>Nochmal versuchen</button>
+      </div>`),a.querySelector("[data-retry]").onclick=_)})}function X(){let e=document.querySelector(".menu");e&&(e.hidden=!0,document.querySelector(".avatar-btn")?.setAttribute("aria-expanded","false"))}document.addEventListener("click",e=>{let t=e.target.closest(".avatar-btn");if(t){let n=document.querySelector(".menu");n.hidden=!n.hidden,t.setAttribute("aria-expanded",String(!n.hidden));return}if(e.target.closest("[data-logout]")){Q.logout();return}e.target.closest(".menu")||X();let a=e.target.closest("a[data-link]");a&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey&&e.button===0&&(e.preventDefault(),be(a.getAttribute("href")))});document.addEventListener("keydown",e=>{e.key==="Escape"&&X()});window.addEventListener("popstate",_);ne(()=>{if(S.user){S.user=null;for(let e of document.querySelectorAll("dialog[open]"))e.close();$("Bitte melde dich erneut an.","error"),j()}});async function ze(){try{let[e,t]=await Promise.all([h("/config"),h("/me")]);S.appName=e.appName,S.user=t.user,document.title=e.appName,j()}catch(e){document.getElementById("app").innerHTML=String(s`
+      <div class="auth">
+        <div class="error-state">
+          <h2>Server nicht erreichbar</h2>
+          <p>${e.message}</p>
+          <button class="btn btn-ghost" data-reload>Neu laden</button>
+        </div>
+      </div>`),document.querySelector("[data-reload]").onclick=()=>location.reload()}}ze();})();
+</script>
+  </body>
+</html>
