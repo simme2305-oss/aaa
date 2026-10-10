@@ -22,7 +22,7 @@ if (admin) {
 
 const app = createApp({
   db,
-  appName: process.env.APP_NAME || 'Hütte Ebenweiler',
+  appName: process.env.APP_NAME || 'Bude Ebenweiler',
   ...(process.env.TRUST_PROXY && { trustProxy: process.env.TRUST_PROXY }),
 });
 

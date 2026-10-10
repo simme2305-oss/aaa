@@ -5,7 +5,7 @@ import { loginView } from './views/login.js';
 import { membersView } from './views/members.js';
 import { profileView } from './views/profile.js';
 
-const state = { user: null, appName: 'Hütte Ebenweiler' };
+const state = { user: null, appName: 'Bude Ebenweiler' };
 
 const routes = [
   { path: '/', label: 'Übersicht', icon: 'home', view: dashboardView },

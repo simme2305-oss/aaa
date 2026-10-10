@@ -1,4 +1,4 @@
-# Hütte Ebenweiler – Gruppen-Website
+# Bude Ebenweiler – Gruppen-Website
 
 Eine Website für eure Gruppe mit **Kalender**, **Admin-Login** und **Passwortsperre**.
 Aufbau und Design orientieren sich an der Lovable-Seite (dunkles Grün, Karten, Navigation unten).
@@ -34,7 +34,7 @@ Fehlt `ADMIN_PASSWORD`, wird ein zufälliges Passwort erzeugt und im Terminal an
 
 | Variable         | Bedeutung                                              | Standard           |
 | ---------------- | ------------------------------------------------------ | ------------------ |
-| `APP_NAME`       | Name oben links und auf der Login-Seite                | `Hütte Ebenweiler` |
+| `APP_NAME`       | Name oben links und auf der Login-Seite                | `Bude Ebenweiler` |
 | `ADMIN_USERNAME` | Benutzername des ersten Admins (nur beim ersten Start) | `admin`            |
 | `ADMIN_PASSWORD` | Passwort des ersten Admins (nur beim ersten Start)     | zufällig           |
 | `PORT`           | Port des Servers                                       | `3000`             |
